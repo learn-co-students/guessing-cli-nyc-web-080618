@@ -18,7 +18,7 @@ describe "Guessing CLI" do
     it "responds to an incorrect guess" do
       allow(self).to receive(:rand).and_return(5)
       expect(self).to receive(:gets).and_return("2")
-      expect(self).to receive(:gets).and_return("exit")
+     expect(self).to receive(:gets).and_return("exit")
       expect { run_guessing_game }.to output(/The computer guessed 5./).to_stdout
     end
   end
